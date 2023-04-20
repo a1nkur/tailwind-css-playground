@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Override base setup using tailwind directive @layer */
+@layer base {
+  h1 {
+    font-size: 6rem;
+  }
+}
+
+/* Overide base setup by applying preamde tailwind utility classes */
+@layer base {
+  h2 {
+    @apply text-6xl;
+  }
+}
+
+/* Create higher level custom classes using @apply directive */
+@layer components {
+  .btn-blue {
+    @apply bg-blue-400 py-2 px-4 rounded-xl font-bold;
+  }
+}
+
+/* Theme Function */
+.content-area {
+  @apply bg-green-200;
+  height: theme("spacing.128");
+}
+
+/* Screen Function  */
+@media screen(xl) {
+  body {
+    @apply bg-black text-white;
+  }
+}
