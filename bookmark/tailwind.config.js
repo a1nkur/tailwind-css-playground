@@ -2,6 +2,7 @@ module.exports = {
   content: ['./*.html'],
   theme: {
     screens: {
+      // Based on this container will adjust it's max-width
       sm: '480px',
       md: '768px',
       lg: '1020px',
